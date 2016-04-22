@@ -5,9 +5,10 @@ var Link = require('react-router').Link
 var UserDetails = require('../components/UserDetails')
 var UserDetailsWrapper = require('../components/UserDetailsWrapper')
 var MainContainer = require('../components/MainContainer')
+var Loading = require('../components/Loading')
 
 function ConfirmBattle (props) {
-  if (props.isLoading) return <p>LOADING...</p>
+  if (props.isLoading) return <Loading text='Preparing for battle' speed={100} />
 
   return (
     <MainContainer>
